@@ -9,7 +9,7 @@ export default function Dashboard() {
       <button
         onClick={() =>
           openModal({
-            id:(modalList?.length || 0) + 1,
+            id: modalList.length + 1,
             type: ModalType.helloModal,
             data: "francisco",
           })

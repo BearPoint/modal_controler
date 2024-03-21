@@ -18,7 +18,11 @@ interface contextModalInterface{
   closeModal: (id: number) => void
 }
 
-export const ModalContext = createContext<contextModalInterface>({} as contextModalInterface);
+export const ModalContext = createContext<contextModalInterface>({
+	modalList: [],
+	openModal: () => {},
+	closeModal: () => {},
+});
 
 export const ModalProvider = ({children}: {children: ReactNode})=> {
   const {modalList, openModal, closeModal} = useModal()

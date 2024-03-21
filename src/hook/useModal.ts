@@ -7,7 +7,7 @@ export default function useModal(){
   const openModal = (newModal: modalStore)=> {
     setModalList(old=> [...old, newModal])
   }
-
+  
   const closeModal =(id: number)=> {
     setModalList(old=> old.filter(modal=> modal.id != id))
   }
